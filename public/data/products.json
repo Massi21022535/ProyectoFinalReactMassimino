@@ -1,0 +1,73 @@
+[
+  {
+    "id": "1",
+    "name": "Nike Mercurial",
+    "price": 120999,
+    "category": "Nike",
+    "description": "Nike Mercurial Vapor 16",
+    "imageUrl": "/images/nike-mercurial.webp"
+  },
+
+  {
+    "id": "2",
+    "name": "Nike Phantom",
+    "price": 175000,
+    "category": "Nike",
+    "description": "Nike Phantom 6 Low Elite",
+    "imageUrl": "/images/nike-phantom.webp"
+  },
+
+  {
+    "id": "3",
+    "name": "Nike Tiempo",
+    "price": 98999,
+    "category": "Nike",
+    "description": "Nike Tiempo Legend 10",
+    "imageUrl": "/images/nike-tiempo.webp"
+  },
+
+  {
+    "id": "4",
+    "name": "Nike StreetGato",
+    "price": 72000,
+    "category": "Nike",
+    "description": "Nike StreetGato",
+    "imageUrl": "/images/nike-streetgato.png"
+  },
+
+  {
+    "id": "5",
+    "name": "Adidas Predator",
+    "price": 119000,
+    "category": "Adidas",
+    "description": "Adidas Predator Firm",
+    "imageUrl": "/images/predator-firm.avif"
+  },
+
+  {
+    "id": "6",
+    "name": "Adidas Elite",
+    "price": 105000,
+    "category": "Adidas",
+    "description": "Adidas Predator Elite",
+    "imageUrl": "/images/predator-elite.avif"
+  },
+
+    {
+    "id": "7",
+    "name": "Adidas Rug",
+    "price": 65000,
+    "category": "Adidas",
+    "description": "Adidas Rug",
+    "imageUrl": "/images/adidas-rug.avif"
+  },
+
+    {
+    "id": "8",
+    "name": "Adidas F50",
+    "price": 220000,
+    "category": "Adidas",
+    "description": "Adidas F50",
+    "imageUrl": "/images/adidas-f50.avif"
+  }
+]

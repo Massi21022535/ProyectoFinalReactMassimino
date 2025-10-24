@@ -1,0 +1,22 @@
+.item-list-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  min-height: 70vh;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-left: 550px;
+  margin-top: 5rem;
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.section-title:empty::before {
+  content: "Bienvenida";
+}

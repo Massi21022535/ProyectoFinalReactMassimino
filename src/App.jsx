@@ -8,7 +8,7 @@ import { Cart } from "./components/Cart/Cart";
 import { ProductFormContainer } from "./components/adminComponents/ProductFormContainer/ProductFormContainer";
 import { RutaProtegida } from "./components/RutaProtegida/RutaProtegida";
 import { Login } from "./components/Login/Login";
-import { MainLayout } from "./layout/Mainlayout";
+import { MainLayout } from "./layout/MainLayout";
 import { AdminLayout } from "./layout/AdminLayout";
 import { AuthProvider } from "./context/CartContext/AuthContext/AuthProvider";
 

@@ -6,20 +6,19 @@ export const Nav = () => {
   const { getTotalItems } = useCartContext();
 
   return (
-    <nav className="main-nav">
-      <ul className="nav-list">
+    <nav>
+      <ul>
         <li>
-          <Link to={"/"}>Inicio</Link>
+          <Link to={"/"}>Home</Link>
         </li>
         <li>
-          <Link to={"/category/Nike"}>Botines Nike</Link>
+          <Link to={"/category/adidas"}>Adidas</Link>
         </li>
         <li>
-          <Link to={"/category/Adidas"}>Botines Adidas</Link>
+          <Link to={"/category/nike"}>Nike</Link>
         </li>
-
-        <li className="cart-item">
-          <Link to="/cart">Carrito</Link>
+        <li>
+          <Link to={"/carrito"}>Carrito</Link>
           {getTotalItems() > 0 && (
             <span className="in-cart">{getTotalItems()}</span>
           )}

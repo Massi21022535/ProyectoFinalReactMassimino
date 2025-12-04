@@ -1,37 +1,43 @@
-import { useState, useEffect } from "react";
-import { ItemList } from "../ItemList/ItemList";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getProducts } from "../../services/product";
+import { ItemList } from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 
-export const ItemListContainer = () => {
+export const ItemListContainer = ({ titulo }) => {
   const [products, setProducts] = useState([]);
-  const { categoryId } = useParams();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { category } = useParams();
 
   useEffect(() => {
-    fetch("/data/products.json")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Problema al buscar el producto");
-        }
-        return res.json();
-      })
-      .then((data) => {
-        if (categoryId) {
-          const filteredData = data.filter((p) => p.category === categoryId);
-          setProducts(filteredData);
-        } else {
-          setProducts(data);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [categoryId]);
+    getProducts(category)
+      .then((data) => setProducts(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, [category]);
 
-return (
-    <section className="item-list-section">
-      <h1 className="section-title">{categoryId || "Bienvenido a la tienda de Botines"}</h1>
-      <ItemList lista={products} />
+  if (loading) {
+    return (
+      <div className="container text-center mt-5">
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Cargando...</span>
+        </div>
+        <p>Cargando catálogo...</p>
+      </div>
+    );
+  }
+
+  return (
+    <section className="container">
+      {/* Agregamos margen superior para que no se pegue al navbar */}
+      <h1 className="my-4">{titulo}</h1>
+
+      {products.length === 0 ? (
+        <p className="alert alert-warning">No se encontraron productos.</p>
+      ) : (
+        <ItemList lista={products} />
+      )}
     </section>
   );
 };

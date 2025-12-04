@@ -7,12 +7,12 @@ export const ItemList = ({ lista }) => {
     <div className="item-list-container">
       {lista.length ? (
         lista.map((prod) => (
-          <Link to={`/detail/${prod.id}`} key={prod.id} className="item-link">
+          <Link to={`/detail/${prod.id}`} key={prod.id}>
             <Item {...prod} />
           </Link>
         ))
       ) : (
-        <p className="no-products-message">No hay productos</p>
+        <p>No hay productos</p>
       )}
     </div>
   );
